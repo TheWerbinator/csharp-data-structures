@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DataStructures/DataStructures.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DataStructures.Tests/DataStructures.Tests.csproj" />
+  </Folder>
+  <Folder Name="/benchmarks/">
+    <Project Path="benchmarks/DataStructures.Benchmarks/DataStructures.Benchmarks.csproj" />
+  </Folder>
+</Solution>
