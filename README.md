@@ -13,8 +13,9 @@ apply to real code.
 ## About this repo
 
 Original implementations: assignments from **CS 2420 (Data Structures and
-Algorithms)** at Southern Utah University, originally written in Java. This
-repo is the C# rewrite — same structures, reorganized by topic, with:
+Algorithms)** and **CS 3000 (Advanced Algorithms)** at Southern Utah University,
+originally written in Java and Python. This repo is the C# consolidation —
+same structures + a selection of classic algorithms, reorganized by topic, with:
 
 - Idiomatic C# generics, `IEnumerable<T>` implementations, nullable reference
   types, and full XML doc comments
@@ -37,6 +38,23 @@ CI are recent (2026).
 | `Sorting/` | `Sorts` (merge, quick, heap) | merge is stable; quick uses median-of-three + recurse-smaller-side |
 | `Trees/` | `BinarySearchTree<T>` | full three-case delete via in-order successor; lazy in-order iterator |
 | `Hashing/` | `ChainingHashTable`, `OpenAddressingHashTable` | chaining vs linear probing with tombstones |
+
+## Algorithms
+
+Selected CLRS-track algorithms from CS 3000, ported from Python. Each one
+exists to show a specific technique — recursion vs memoization vs iteration,
+divide-and-conquer with the cross-the-midpoint trick, BFS for unweighted
+shortest paths, the offline-optimal cache policy that bounds every online
+policy, the trick to find min and max in 3n/2 comparisons instead of 2n.
+
+| Module | Type | Technique |
+|---|---|---|
+| `Algorithms/DynamicProgramming/` | `Fibonacci` | Naive recursive vs memoized vs iterative — the same recurrence with O(2^n) → O(n) → O(n) space O(1) |
+| `Algorithms/DynamicProgramming/` | `LongestPalindromicSubsequence` | O(n²) bottom-up table + reconstruction by walking it backwards |
+| `Algorithms/DivideConquer/` | `MaxSubarray` | CLRS divide-and-conquer (O(n log n)) alongside Kadane (O(n)) — same answer, different lessons |
+| `Algorithms/Graphs/` | `BreadthFirstSearch<T>` | Distance + predecessor map; `PathTo` reconstructs shortest paths |
+| `Algorithms/Greedy/` | `FurthestInFutureCache<T>` | Bélády's optimal offline page replacement (the lower bound LRU/CLOCK/ARC are measured against) |
+| `Algorithms/Selection/` | `MinMax` | Simultaneous min/max in ⌈3n/2⌉ - 2 comparisons by processing pairs |
 
 ## Complexity reference
 
